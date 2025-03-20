@@ -3,7 +3,7 @@
 
 export const inter = Inter({ subsets: ['latin'] });
 
-export const  tittleFont = Racing_Sans_One({
+export const  titleFont = Racing_Sans_One({
     subsets: ['latin'],
     weight: '400',
   });
