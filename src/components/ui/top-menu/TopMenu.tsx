@@ -20,9 +20,9 @@ export const TopMenu = () => {
 
             {/* Center Menu */}
             <div className="hidden sm:block">
-                <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/category/smartphones">Smartphones</Link>
-                <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/category/laptops">Laptops</Link>
-                <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/category/consoles">Consoles</Link>
+                <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/category/iphone">Smartphones</Link>
+                <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/category/laptop">Laptops</Link>
+                <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/category/console">Consolas</Link>
             </div>
 
             {/* Search, Cart, Menu */}

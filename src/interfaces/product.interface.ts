@@ -4,13 +4,12 @@ export interface Product {
     images: string[];
     inStock: number;
     price: number;
-    sizes: ValidSizes[];
+    sizes: Size[];
     slug: string;
     tags: string[];
     title: string;
-    type: ValidTypes;
-    gender: 'men'|'women'|'kid'|'unisex'
+    type: Type;
 }
 
-export type ValidSizes = 'XS'|'S'|'M'|'L'|'XL'|'XXL'|'XXXL';
-export type ValidTypes = 'shirts'|'pants'|'hoodies'|'hats';
+export type Size = '64GB' | '128GB' | '256GB' | '512GB' | '13-inch' | '15-inch' | '17-inch' | 'Standard' | 'Digital';
+export type Type = 'iphone' | 'laptop' | 'console'; 

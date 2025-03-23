@@ -1,22 +1,42 @@
+import { Title, ProductGrid } from '@/components/index';
+import { products } from 'app/(shop)/page';
+import { Type } from 'interfaces';
 import { notFound } from 'next/navigation';
+import { initialData } from 'seed/seed';
+
+const seedProducts = initialData.products;
 
 interface Props {
   params: {
-    id: string; 
+    id: Type; 
   }
 }
 
 export default function({params }: Props) {  
 
   const { id } = params;
+  const products = seedProducts.filter(product => product.type === id);
 
-  if (id === "consoles") {
+const labels: Record<Type, string> = {   
+  'iphone': 'Smartphones',
+  'laptop': 'Laptops',
+  'console': 'Consolas'
+}
+
+  /*if (id === "console") {
     notFound();
-  }
-    return ( <>
-      <div className="">
-        <h1>Category Page { id }</h1>
-      </div>
-        </>
+  } */
+    return ( 
+      <>
+        <Title
+        title={`Pantalla de ${( labels )[id]}`}
+        subtitle='Todos los productos'
+        className='mb-2' 
+        />
+
+        <ProductGrid
+        products={products}
+        />
+      </>
     )
 }   

@@ -1,8 +1,10 @@
-import { QuantitySelector, Title } from "@/components/index"
+import {  Title } from "@/components/index"
 import Link from 'next/link'
 import { initialData } from "seed/seed"
 import Image from "next/image"
 import { Span } from "next/dist/trace"
+import clsx from "clsx"
+import { IoCartOutline } from "react-icons/io5"
 
 
 const productsInCart = [
@@ -11,21 +13,42 @@ const productsInCart = [
   initialData.products[2],
 ]
 
-export default function() { 
+interface Props{
+    params: {
+        id: string;
+    }
+}
+
+export default function({params}: Props) { 
+
+    const { id } = params;
+
+    // todo: verificar
+    //redirect(/)
+
   return ( <>
       <div className="flex justify-center items-center mb-72 px-10 sm:px-0">
         <div className="flex flex-col w-[1000px]">
-          <Title title= "Verificar orden"
+          <Title title= {`Orden #${id}`}
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 ">
 
             {/* Carrito */}
             <div className="flex flex-col mt-5">
-                <span className="text-xl">Ajustar elementos </span>
-                <Link href="/cart" className="underline mb-5">
-                Editar carrito 
-                </Link>
+                <div className={
+                    clsx(
+                        "flex items-center rounded-lg py-2 px-3.5 text-xs font-bold text-white mb-5",
+                        {
+                            "bg-red-500": false,
+                            "bg-green-700": true,
+                        }
+                    )
+                }>
+                    <IoCartOutline size={30}/>
+                    {/*<span className="mx-2">Pendiente de pago</span>*/}
+                    <span className="mx-2">Orden pagada</span>
+                </div>
 
               {/* Items */}
 
@@ -91,19 +114,19 @@ export default function() {
 
                 <div className="mt-5 mb-2 w-full">
 
-                  <p className="mb-5">
-                    {/* Disclaimer */}
-                    <span className="text-xs">
-                    Al hacer click en "colocar orden", aceptas nuestros <a href="#" className="underline"> terminos y condiciones </a> y <a href="#" className="underline"> politica de privacidad</a>
-                    </span>
-
-                  </p>
-
-                  <Link 
-                  className="flex btn-primary justify-center"
-                  href="/orders/12321">
-                  Colocar orden 
-                  </Link>
+                    <div className={
+                        clsx(
+                            "flex items-center rounded-lg py-2 px-3.5 text-xs font-bold text-white mb-5",
+                            {
+                                "bg-red-500": false,
+                                "bg-green-700": true,
+                            }
+                        )
+                    }>
+                        <IoCartOutline size={30}/>
+                        {/*<span className="mx-2">Pendiente de pago</span>*/}
+                        <span className="mx-2">Orden pagada</span>
+                    </div> 
 
                 </div>
 
