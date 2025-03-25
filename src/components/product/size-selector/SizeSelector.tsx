@@ -10,7 +10,7 @@ interface Props {
 export const SizeSelector = ({selectedSize, availableSizes}: Props) => {
     return (
         <div className="my-5">
-            <h3 className="font-bold mb-4">Tallas disponibles</h3>
+            <h3 className="font-bold mb-4">Almacenamiento disponible</h3>
             <div className="flex">
 
                 {

@@ -14,10 +14,17 @@ interface SeedProduct {
   type ValidTypes = 'iphone' | 'laptop' | 'console';
   
   interface SeedData {
+    categories: string[],
     products: SeedProduct[],
   }
   
   export const initialData: SeedData = {
+
+    categories:[
+      'Iphones', 'Laptops', 'Consoles'
+
+    ],
+
     products: [
       // iPhones (8 productos)
       {

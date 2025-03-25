@@ -1,5 +1,4 @@
 import notFound from "app/(shop)/category/not-found";
-import { products } from "app/(shop)/page";
 import { titleFont } from "config/fonts";
 import { initialData } from "seed/seed";
 import { MobileSlideShow, QuantitySelector, SizeSelector, SlideShow } from "@/components/index";
@@ -21,21 +20,25 @@ if ( !product ) {
   return (
     <div className="mt-5 mb-20 grid grid-cols-1 md:grid-cols-3 gap-3">
       
-      {/* Slideshow Mobile */}
-      <MobileSlideShow
-      title={product.title}
-      images={product.images}
-      className="block md:hidden"
-      />
-      
+      {/* Slideshow */ }
+      <div className="col-span-1 md:col-span-2 ">
 
-      {/* Slideshow Desktop */}
-      <SlideShow 
-      title={ product .title }
-      images={ product.images }
-      className="hidden md:block"
-      />
+        <div className="col-span-1 md:col-span-2 "></div>
+        {/* Slideshow Mobile */}
+        <MobileSlideShow
+        title={product.title}
+        images={product.images}
+        className="block md:hidden"
+        />
+        
 
+        {/* Slideshow Desktop */}
+        <SlideShow 
+        title={ product .title }
+        images={ product.images }
+        className="hidden md:block"
+        />
+      </div>
 
       {/* Detalles */}
       <div className="col-span-1 px-5">
@@ -45,7 +48,7 @@ if ( !product ) {
 
         <p className="text-lg mb-5">${ product.price }</p>
 
-        {/* Selector de size */}
+        {/* Selector de almacenamiento */}
         <SizeSelector
           selectedSize={ product.sizes[0] }
           availableSizes={ product.sizes }

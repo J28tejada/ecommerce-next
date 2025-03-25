@@ -69,13 +69,13 @@ export default function() {
                   <span className="text-right">3 articulos</span>
 
                   <span>Subtotal</span>
-                  <span className="text-right">$ 100</span>
+                  <span className="text-right">$ 2,697</span>
 
                   <span>Impuestos (18%)</span>
-                  <span className="text-right">$ 18</span>
+                  <span className="text-right">$ 485.46</span>
 
                   <span className="mt-5 text-2xl">Total</span>
-                  <span className="mt-5 text-2xl text-right">$ 100</span>
+                  <span className="mt-5 text-2xl text-right">$ 3,182.46</span>
 
                 </div>
       

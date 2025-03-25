@@ -69,8 +69,8 @@ export default function({params}: Props) {
 
                     <div>
                       <p>{product.title}</p>
-                      <p>{product.price} x 3</p>
-                      <p className="font-bold">Subtotal: ${product.price * 3} </p>
+                      <p>{product.price} x 1</p>
+                      <p className="font-bold">Subtotal: ${product.price * 1} </p>
                     </div>
                   </div>
                 ))
@@ -84,7 +84,7 @@ export default function({params}: Props) {
                 <div className="mb-10">
                   <p className="text-xl">Josue Tejada</p>
                   <p>C/ Luis Alvarez 75</p>
-                  <p>Guazuma</p>
+                  <p>Bani</p>
                   <p>Prov. Peravia</p>
                   <p>CP: 94000</p>
                   <p>809-829-0254</p>
@@ -98,17 +98,17 @@ export default function({params}: Props) {
 
                 <h2 className="text-2xl mb-2">Resumen de orden</h2>
                 <div className="grid grid-cols-2">
-                  <span>No. productos</span>
+                <span>No. productos</span>
                   <span className="text-right">3 articulos</span>
 
                   <span>Subtotal</span>
-                  <span className="text-right">$ 100</span>
+                  <span className="text-right">$ 2,697</span>
 
                   <span>Impuestos (18%)</span>
-                  <span className="text-right">$ 18</span>
+                  <span className="text-right">$ 485.46</span>
 
                   <span className="mt-5 text-2xl">Total</span>
-                  <span className="mt-5 text-2xl text-right">$ 100</span>
+                  <span className="mt-5 text-2xl text-right">$ 3,182.46</span>
 
                 </div>
 

@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:css": "tailwindcss -i ./src/app/globals.css -o ./dist/styles.css --watch"
+    "build:css": "tailwindcss -i ./src/app/globals.css -o ./dist/styles.css --watch",
+    "seed": "ts-node src/seed/seed-database.ts"
   },
   "dependencies": {
+    "@prisma/client": "^6.5.0",
     "clsx": "^2.1.1",
     "next": "15.2.2",
     "react": "^19.0.0",
@@ -28,7 +30,9 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
     "postcss": "^8.5.3",
+    "prisma": "^6.5.0",
     "tailwindcss": "^4.0.14",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
