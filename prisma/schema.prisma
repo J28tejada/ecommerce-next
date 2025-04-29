@@ -8,12 +8,15 @@ datasource db {
 }
 
 enum Size {
-  GB32
-  GB64
-  GB128
-  GB256
-  GB512
-  GB1024
+  GB64     @map("64GB")
+  GB128    @map("128GB")
+  GB256    @map("256GB")
+  GB512    @map("512GB")
+  INCH_13  @map("13-inch")
+  INCH_15  @map("15-inch")
+  INCH_17  @map("17-inch")
+  Standard
+  Digital
 }
 
 model Category {
@@ -32,8 +35,9 @@ model Product {
   slug        String   @unique
   tags        String[] @default([])
 
-  catergory    Category       @relation(fields: [categoryId], references: [id])
+  category    Category       @relation(fields: [categoryId ], references: [id])
   categoryId   String
+
   ProductImage ProductImage[]
 }
 
