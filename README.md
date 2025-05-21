@@ -9,7 +9,8 @@
 5. Correr las migraciones de Prisma ```npx prisma migrate dev```
 6. Ejecutar seed ```npm run seed```
 7. Correr el proyecto ```npm run dev```
-
 #  Correr en Prod
+
+
 
 ![image alt](https://github.com/J28tejada/ecommerce-next/blob/35f937fcec270401c5e6149a023e5493246e77a5/DelReyEcommerce.jpg)
